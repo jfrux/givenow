@@ -1,0 +1,12 @@
+{
+"user" : "joshuairl",
+"name" : "Bilddit",
+"domain": "bilddit.com",
+"repository" : {
+"type" : "git",
+"url"  : "https://github.com/joshuairl/noname.git"
+},
+"scripts" : {
+"start" : "server.js"
+}
+}

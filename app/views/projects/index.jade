@@ -1,0 +1,30 @@
+extends ../layouts/discover
+
+block subcontent
+  h3 Projects
+
+  if (projects.length > 0)
+    each project in projects
+      .project
+        a.title(href='/projects/'+project._id, title=project.title) #{project.title}
+        p=project.body
+        .author
+          span= formatDate(project.createdAt, "%b %d, %Y at %I:%M %p")
+          span &nbsp;| Author:&nbsp;
+          if(project.user)
+            a(href="/users/"+project.user._id)=project.user.name
+          else
+            span Anonymous
+          | &nbsp;|&nbsp;
+          if (project.tags)
+            span.tags
+              span Tags:&nbsp;
+              each tag in project.tags.split(',')
+                a.tag(href="/tags/"+tag)
+                  i.icon-tags
+                  |  #{tag}
+
+  if (pages > 1)
+    .pagination
+      ul
+        != createPagination(pages, page)

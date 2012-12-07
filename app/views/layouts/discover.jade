@@ -1,0 +1,17 @@
+extends ./default
+
+block content
+  div.row
+    div.span12
+      ul.nav.nav-pills
+        - var items = [{path:"/discover",label:"Discover",className:"discover"},{path:"/projects",label:"Projects",className:"projects"},{path:"/areas",label:"Focus Areas",className:"areas"},{path:"/search",label:"Search",className:"search"}]
+          each item in items
+            if (req.path == item.path) 
+              li.active
+                a(href=item.path, title=item.label, class=item.className) #{item.label}
+            else
+              li
+                a(href=item.path, title=item.label, class=item.className) #{item.label}
+
+  div.row
+    block subcontent

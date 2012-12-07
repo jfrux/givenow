@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.bilddit.server</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>forever</string>
+            <string>start -l forever.log -o out.log -e err.log server.js</string>
+        </array>
+        <key>WorkingDirectory</key>
+        <string>/Users/joshua/Projects/noname/</string>
+        <key>StandardErrorPath</key>
+        <string>logs/service-err.log</string>
+        <key>StandardOutPath</key>
+        <string>logs/service-out.log</string>
+        <key>OnDemand</key>
+        <false/>
+        <key>KeepAlive</key>
+        <true/>
+        <key>RunAtLoad</key>
+        <true/>
+    </dict>
+</plist>

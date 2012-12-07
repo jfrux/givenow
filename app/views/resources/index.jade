@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block main
+  h1 Resources
+
+block content
+  each resource in resources
+    .resource
+      a.title(href='/resources/'+resource._id, title=resource.name) #{resource.name}
+      p=resource.textpath
+        
+  if (pages > 1)
+    .pagination
+      ul
+        != createPagination(pages, page)

@@ -1,0 +1,83 @@
+.profile {
+	border:1px solid #C3C8BD;
+	border-radius:5px;
+	.box-shadow(0px 2px 3px #C3C8BD);
+
+	.profileContent {
+		> .nav {
+			margin-bottom:-1px;
+			a {
+				line-height:12px;
+			}
+		}
+
+		.subcontent {
+			h4 {
+				margin-top:0px;
+				padding:5px 5px 5px 6px;
+			}
+			padding:4px;
+			border:1px solid #DDDDDD;
+			background-color:#FFF;
+		}
+	}
+	.profileFrame {
+		background-color: #EEEEEE;
+		border: 1px solid #FFFFFF;
+		border-radius: 4px 4px 4px 4px;
+		padding: 8px;
+		.clearfix()
+	}
+
+	
+	
+	.avatar { }
+	.optionsBar {
+		position: absolute;
+		right: 2px;
+		top: -15px;
+	}
+	.details {
+		.detailsBox {
+			border-bottom: 1px solid #DDDDDD;
+			margin: 0 0 8px;
+			padding: 18px 0 15px;
+		}
+	}
+
+	.profileHead {
+		position:relative;
+		> h1 {
+			color: #222;
+			font-size: 26px;
+			letter-spacing: -1px;
+			margin-top: 6px;
+			> span.name {
+				display: inline-block;
+				font-size: 25px;
+				line-height: 26px;
+				margin-bottom: -12px;
+				overflow-x: hidden;
+				padding-bottom: 4px;
+				text-overflow: ellipsis;
+				width: 100%;
+			}
+			> span.addlName {
+				color: #666666;
+			    display: inline-block;
+			    font-size: 20px;
+			    font-style: normal;
+			    font-weight: 300;
+			    letter-spacing: 0;
+			    line-height: 24px;
+			    margin-bottom: 12px;
+			    overflow-x: hidden;
+			    position: relative;
+			    text-overflow: ellipsis;
+			    top: -2px;
+			    vertical-align: top;
+			    width: 100%;
+			}
+		}
+	}
+}
